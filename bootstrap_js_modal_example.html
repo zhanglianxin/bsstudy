@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Modal Options</h2>
+        <p>The <code>data-backdrop</code> attribute specifies whether the modal should hava a dark overlay (the background color of the current page) or not</p>
+        <button class="btn btn-info btn-md" type="button" data-toggle="modal" data-target="#myModal" data-backdrop="true">Modal with Overlay (true)</button>
+        <button class="btn btn-info btn-md" type="button" data-toggle="modal" data-target="#myModal2" data-backdrop="false">Modal without Overlay (false)</button>
+        <button class="btn btn-info btn-md" type="button" data-toggle="modal" data-target="#myModal3" data-backdrop="static">Modal with static backdrop</button>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal with Dark Overlay</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>This modal has a dark overlay.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">�</button>
+                        <h4 class="modal-title">Modal without Overlay</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>This modal has no overlay.</p>
+                        <p><strong>Note:</strong> You cannot click outside of this modal to close it.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal3" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">�</button>
+                        <h4 class="modal-title">Static Backdrop</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>You cannot click outside of this modal to close it.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <p>The <code>data-keyboard</code> attributes specifies whether the modal can be closed with the escape key.</p>
+        <p><strong>Note:</strong> Press the <kbd>Tab</kbd> key on your keyboard to enter the modal window and then press the <kbd>Esc</kbd> key.</p>
+        <button class="btn btn-success btn-md" id="myBtn" type="button" data-toggle="modal" data-target="#myModal4" data-keyboard="true">Modal (data-keyboard="true")</button>
+        <button class="btn btn-danger btn-md" id="myBtn2" type="button" data-toggle="modal" data-target="#myModal5" data-keyboard="false">Modal (data-keyboard="false")</button>
+
+        <div class="modal fade" id="myModal4" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Options</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>This modal can be closed with the <kbd>escape</kbd> key on your keyboard.</p>
+                        <p><strong>Note:</strong> You need to press the <kbd>tab</kbd> key on the keyboard to first enter the modal window, and then press the <kbd>Esc</kbd> key.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal5" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">�</button>
+                        <h4 class="modal-title">Modal Options</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>This modal cannot be closed with the <kbd>escape</kbd> key on your keyboard.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <p>The <code>data-show</code> attribute specifies whether the modal should be shown upon initialization.</p>
+        <button class="btn btn-success btn-md" id="myBtn3" type="button" data-toggle="modal" data-target="#myModal6" data-show="true">Modal (data-show="true")</button>
+        <button class="btn btn-danger btn-md" id="myBtn4" type="button" data-toggle="modal" data-target="#myModal7" data-show="false">Modal (data-show="false")</button>
+
+        <div class="modal fade" id="myModal6" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Options</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal content...</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal7" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">�</button>
+                        <h4 class="modal-title">Modal Options</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal content...</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JS Tab (tab.js)</h2>
+        <p>Tabs are used to separate content into different panes where each pane is viewable one at a time.</p>
+
+        <h2>The Tab Plugin Classes</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Class</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.nav .nav-tabs</code></td><td>Creates navigation tabs</td></tr>
+                <tr><td><code>.nav-justified</code></td><td>Makes navigation tabs/pills equal widths of their parent, at screens wider than 768px. <br>On smaller screens, the nav tabs are stacked</td></tr>
+                <tr><td><code>.tab-content</code></td><td>Together with .tab-pane and data-toggle="tab", it makes the tab toggable</td></tr>
+                <tr><td><code>.tab-pane</code></td><td>Together with .tab-content and data-toggle="tab", it makes the tab toggable</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Via <big><code>data-*</code></big> Attritutes</h2>
+        <p>Add <code>data-toggle="tab"</code> to each tab, and add a <code>.tab-pane</code> class with a unique ID for every tab and wrap them in a <code>.tab-content</code> class.</p>
+<pre>
+&lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;&lt;a data-toggle="tab" href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a data-toggle="tab" href="#menu1"&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane fade in active" id="home"&gt;
+        &lt;h3&gt;HOME&lt;/h3&gt;
+        &lt;p&gt;Some content.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane fade" id="#menu1"&gt;
+        &lt;h3&gt;Menu 1&lt;/h3&gt;
+        &lt;p&gt;Some content in menu 1.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        <h2>Via JavaScript</h2>
+        <p>Enable manually with:</p>
+<pre>
+// Select all tabs
+$('.nav-tabs a').click(function() {
+    $(this).tab('show');
+});
+// Select tab by name
+$('.nav-tabs a[href="#home"]').tab('show');
+// Select first tab
+$('.nav-tabs a:first').tab('show');
+// Select last tab
+$('.nav-tabs a:last').tab('show');
+// Select fourth tab (zero-based)
+$('.nav-tabs li:eq(3) a').tab('show');
+</pre>
+
+        <h2>Tab Methods</h2>
+        <p>The following table lists all available tab methods.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Method</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.tab("show")</code></td><td>Shows the tab</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Tab Events</h2>
+        <p>The following table lists all available tab events.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Event</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>show.bs.tab</code></td><td>Occurs when the tab is about to be shown</td></tr>
+                <tr><td><code>shown.bs.tab</code></td><td>Occurs when the tab is fully shown (after CSS transitions have completed)</td></tr>
+                <tr><td><code>hide.bs.tab</code></td><td>Occurs when the tab is about to be hidden</td></tr>
+                <tr><td><code>hidden.bs.tab</code></td><td>Occurs when the tab is fully hidden (after CSS transitions have completed)</td></tr>
+            </tbody>
+        </table>
+        <p><strong>Tip:</strong> Use jQuery's <u>event.target</u> and <u>event.relatedTarget</u> to get the active tab and the previous active tab:</p>
+<pre>
+$('.nav-tabs a').on('shown.bs.tab', function(event) {
+    var x = $(event.target).text(); // active tab
+    var y = $(event.relatedTarget).text(); // previous tab
+});
+</pre>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+    </script>
+</html>

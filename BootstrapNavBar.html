@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body style="height: 1500px; margin: 50px 0;">
+    <div class="container">
+        <h2>Basic Navigation Bar</h2>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:void(0);">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0);">Home</a></li>
+                    <li><a href="javascript:void(0);">Page 1</a></li>
+                    <li><a href="javascript:void(0);">Page 2</a></li>
+                    <li><a href="javascript:void(0);">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2>Inverted Navigation Bar</h2>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:void(0);">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0);">Home</a></li>
+                    <li><a href="javascript:void(0);">Page 1</a></li>
+                    <li><a href="javascript:void(0);">Page 2</a></li>
+                    <li><a href="javascript:void(0);">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2>Fixed Navigation Bar</h2>
+        <p>The navigation bar can also be fixed at the top or at the bottom of the page.</p>
+        <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
+        <p>The <code>.navbar-fixed-top</code> class makes the navigation bar fixed at the top:</p>
+        <h3>Fixed Top Navbar</h3>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:void(0);">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0);">Home</a></li>
+                    <li><a href="javascript:void(0);">Page 1</a></li>
+                    <li><a href="javascript:void(0);">Page 2</a></li>
+                    <li><a href="javascript:void(0);">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h3>Fixed Bottom Navbar</h3>
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:void(0);">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0);">Home</a></li>
+                    <li><a href="javascript:void(0);">Page 1</a></li>
+                    <li><a href="javascript:void(0);">Page 2</a></li>
+                    <li><a href="javascript:void(0);">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2>Navigation Bar With Dropdown</h2>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:void(0);">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0);">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Page 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);">Page 1-1</a></li>
+                            <li><a href="javascript:void(0);">Page 1-2</a></li>
+                            <li><a href="javascript:void(0);">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">Page 2</a></li>
+                    <li><a href="javascript:void(0);">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2>Right Aligned Navigation Bar</h2>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:void(0);">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0);">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Page 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);">Page 1-1</a></li>
+                            <li><a href="javascript:void(0);">Page 1-2</a></li>
+                            <li><a href="javascript:void(0);">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">Page 2</a></li>
+                    <li><a href="javascript:void(0);">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li style="margin-right: 5px;"><a href="javascript:void(0);"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2>Collapsible Navigation Bar</h2>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:void(0);">WebSiteName</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="javascript:void(0);">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0);">Page 1-1</a></li>
+                                <li><a href="javascript:void(0);">Page 1-2</a></li>
+                                <li><a href="javascript:void(0);">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);">Page 2</a></li>
+                        <li><a href="javascript:void(0);">Page 3</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li style="margin-right: 5px;"><a href="javascript:void(0);"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

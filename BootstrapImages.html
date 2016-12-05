@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Rounded Corners</h2>
+        <img src="imgs/cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+        <h2>Circle</h2>
+        <img src="imgs/cinqueterre.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236">
+        <h2>Thumbnail</h2>
+        <img src="imgs/cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+        <h2>Responsive Images</h2>
+        <!-- The .img-responsive class applies display: block; and max-width: 100%; and height: auto; to the image. -->
+        <img src="imgs/img_chania.jpg" class="img-responsive" alt="Chania" width="460" height="345">
+        <h2>Image Gallery</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="imgs/pulpitrock.jpg" class="thumbnail">
+                    <p>Pulpit Rock: A famous tourist attraction in Forsand, Ryfylke, Norway.</p>
+                    <img src="imgs/pulpitrock.jpg" alt="Pulpit Rock" style="width: 150px; height: 150px">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="imgs/moustiers-sainte-marie.jpg" class="thumbnail">
+                    <p>Moustiers-Sainte-Marie: Considered as one of the "most beautiful villages of France".</p>
+                    <img src="imgs/moustiers-sainte-marie.jpg" alt="Moustiers Sainte Marie" style="width: 150px; height: 150px">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="imgs/cinqueterre.jpg" class="thumbnail">
+                    <p>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</p>
+                    <img src="imgs/cinqueterre.jpg" alt="Cinque Terre" style="width: 150px; height: 150px">
+                </a>
+            </div>
+        </div>
+        <h2>Responsive Embeds</h2>
+        <!-- The following example creates a responsive video by adding an .embed-responsive-item class to an <iframe> tag (the video will then scale nicely to the parent element). The containing <div> defines the aspect ratio of the video. -->
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="//cdn1.evernote.com/evernote.com/video/homepage/homepage-hero-video.mp4"></iframe>
+        </div>
+        <!-- 4:3 aspect ratio -->
+        <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="//cdn1.evernote.com/evernote.com/video/homepage/homepage-hero-video.mp4"></iframe>
+        </div>
+    </div>
+</body>
+</html>

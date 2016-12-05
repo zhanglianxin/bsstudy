@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Bootstrap's Default Settings</h2>
+        <p>Individual form controls automatically receive some global styling with Bootstrap.</p>
+        <p>All texttual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code> elements with <code>class="form-group"</code> are set to <code>width: 100%</code>; by default.</p>
+        <p>Standard rules for Bootstrap forms:</p>
+        <p>
+            <ul>
+                <li>Add <code>role="form"</code> to the <code>&lt;form&gt;</code> element (helps improve accessibility for people using screen readers)</li>
+                <li>Wrap labels and form controls in a <code>&lt;div&gt;</code> element with <code>class="form-group"</code> (needed for optimum spacing)</li>
+                <li>Add <code>class="form-control"</code> to all textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements</li>
+            </ul>
+        </p>
+
+        <h2>Inline form</h2>
+        <p>Make the viewport larger than 768px wide to see that all of the form elements are inline, left aligned, and the labels are alongside.</p>
+        <form class="form-inline" role="form" action="javascript:;">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input class="form-control" type="password" id="pwd" name="pwd" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Submit</button>
+            </div>
+        </form>
+
+        <h2>Horizontal form</h2>
+        <p>Aligns labels and groups of form controls in a horizontal layout</p>
+        <form class="form-horizontal" role="form" action="javascript:;">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="password" id="pwd" name="pwd" placeholder="Enter password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-default" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

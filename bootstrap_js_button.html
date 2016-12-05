@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>JS Button (button.js)</h2>
+        <p>Use this plugin if you want to have more control over your buttons.</p>
+
+        <h2>Via JavaScript</h2>
+        <p>Enable manually with:</p>
+        <pre>$('.btn').button();</pre>
+
+        <h2>Button Methods</h2>
+        <p>The following table lists all available button methods.</p>
+        <p><strong>Note:</strong> For this plugin, methods can also be passed via data attributes; append the method name to <code>data-</code>, as in <code>data-toggle</code> or <code>data-loading</code>.</p>
+        <table>
+            <thead>
+                <tr><th width="30%">Method</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.button("toggle")</code></td><td>Makes the button look pressed</td></tr>
+                <tr><td><code>.button("loading")</code></td><td>Disables the button and changes the button text to "loading..."</td></tr>
+                <tr><td><code>.button("reset")</code></td><td>Changes the button text to original text (if changed)</td></tr>
+                <tr><td><code>.button("string")</code></td><td>Specifies a new button text</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Using CSS to Customize Buttons</h2>
+        <p>How to remove the rounded borders:</p>
+<pre>
+.btn-default {
+    border-radius: 0;
+}
+</pre>
+        <p>How to add a spedific color:</p>
+<pre>
+.btn-default {
+    background: #000;
+    color: #fff;
+}
+.btn-default:hover {
+    background: #fff;
+    color: #000;
+}
+</pre>
+        <p>How to add shadows:</p>
+<pre>
+.btn-default {
+    box-shadow: 1px 2px 5px #000;
+}
+</pre>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

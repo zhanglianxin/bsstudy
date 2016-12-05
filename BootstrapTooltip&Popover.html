@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Tooltips must be initialized with jQuery
+            $('[data-toggle="tooltip"]').tooltip();
+            // Popovers must be initialized with jQuery
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Tooltip Example</h2>
+        <p>The Tooltip plugin is small pop-up box that appears when the user moves the mouse pointer over an element:</p>
+        <a href="javascript:void(0);" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+        <p>By default, the tooltip will appear on top of the element.</p>
+        <p>Use the <code>data-placement</code> attribute to set the position of the tooltip on top, bottom, left or the right side of the element:</p>
+        <ul class="list-inline">
+            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="auto left" title="Hooray!">Auto Left</a></li>
+            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="auto right" title="Hooray!">Auto Right</a></li>
+        </ul>
+        <p><strong>Tip: </strong>You can also use the data-placement attribute with a value of "auto", which will let the browser decide the position of the tooltip. For example, if the value is "auto left", the tooltip will display on the left side when possible, otherwise on the right.</p>
+
+        <hr>
+        <h2>Popover Example</h2>
+        <p>The Popover plugin is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content.</p>
+        <a href="javascript:void(0);" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+        <p>By default, the popover will appear on the right side of the element.</p>
+        <p>Use the <code>data-placement</code> attribute to set the position of the popover on top, bottom, left or the right side of the element:</p>
+        <ul class="list-inline">
+            <li><a href="javascript:void(0);" data-toggle="popover" data-placement="auto left" title="Header" data-content="Content">Auto Left</a></li>
+            <li><a href="javascript:void(0);" data-toggle="popover" data-placement="top" title="Header" data-content="Content">Top</a></li>
+            <li><a href="javascript:void(0);" data-toggle="popover" data-placement="bottom" title="Header" data-content="Content">Bottom</a></li>
+            <li><a href="javascript:void(0);" data-toggle="popover" data-placement="left" title="Header" data-content="Content">Left</a></li>
+            <li><a href="javascript:void(0);" data-toggle="popover" data-placement="right" title="Header" data-content="Content">Right</a></li>
+            <li><a href="javascript:void(0);" data-toggle="popover" data-placement="auto right" title="Header" data-content="Content">Auto Right</a></li>
+        </ul>
+        <h3>Closing Popovers</h3>
+        <p>By default, the popover is closed when you click on the element again. However, you can use the <code>data-trigger="focus"</code>  which will close the popover when clicking outside the element:</p>
+        <a href="javascript:void(0);" titlle="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover">Click me</a>
+        <p><strong>Tip:</strong> If you want the popover to be displayed when you move the mouse pointer over the element, use the <code>data-trigger</code> attribute with a value of "hover":</p>
+        <a href="javascript:void(0);" titlle="Dismissible popover" data-toggle="popover" data-trigger="hover" data-content="Move out of here to close this popover">Hover me</a>
+    </div>
+</body>
+</html>

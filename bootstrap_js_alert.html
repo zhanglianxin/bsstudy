@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>JS Alert (alert.js)</h2>
+        <p>The alert plugin include options and methods to close alert messages.</p>
+
+        <h2>Close Alerts Via <code>data-*</code> Attributes</h2>
+        <p>Add <code>data-dismiss="alert"</code> to a link or a button element to close the alert message.</p>
+        <pre>&lt;a href="#" class="close" data-dismiss="alert" aria-label="close"&gt;&times;&lt;/a&gt;</pre>
+        
+        <h2>Close Alerts Via JavaScript</h2>
+        <p>Close manually with:</p>
+        <pre>$('.close').alert();</pre>
+
+        <h2>Alert Methods</h2>
+        <p>The following table lists all available alert methods.</p>
+        <table>
+            <thead>
+                <tr><th width="45%">Method</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.alert("close")</code></td><td>Closes the alert message</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Alert Events</h2>
+        <p>The following table lists all available alert events.</p>
+        <table>
+            <thead>
+                <tr><th width="28%">Event</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>close.bs.alert</code></td><td>Occurs when the alert message is about to be closed</td></tr>
+                <tr><td><code>closed.bs.alert</code></td><td>Occurs when the alert message has been closed</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Dropdowns</h2>
+        <p>The .dropdown class is used to indicate a dropdown menu.</p>
+        <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+        <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>
+        <p>The .divider class is used to separate links inside the dropdown menu.</p>
+        <p>The .dropdown-header class is used to add headers inside the dropdown menu.</p>
+        <p>The .disabled class is used to disable an item in the dropdown menu.</p>
+        <p>Add the .dropdown-menu-right class to .dropdown-menu to right-align the dropdown menu.</p>
+        <p>The .dropup class makes the dropdown menu expand upwards instead of downwards.</p>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li class="dropdown-header">Dropdown header 1</li>
+                <li><a href="#">HTML</a></li>
+                <li class="disabled"><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Dropdown header 2</li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

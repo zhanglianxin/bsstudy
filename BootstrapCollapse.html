@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Collapsible</h2>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+        <div id="demo" class="collapse">
+            <p>The <code>.collapse</code> class indicates a collapsible element (a &lt;div&gt; in our example); this is the content that will be shown or hidden with a click of a button.</p>
+            <p>To control (show/hide) the collapsible content, add the <code>data-toggle="collapse"</code> attribute to an &lt;a&gt; or a &lt;button&gt; element. Then add the <code>data-target="#id"</code> attribute to connect the button with the collapsible content (&lt;div id="demo"&gt;).</p>
+        </div><br>
+
+        <a href="#demo1" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+        <div id="demo1" class="collapse">
+            <p><strong>Note:</strong> For &lt;a&gt; elements, you can use the <code>href</code> attribute instead of the <code>data-target</code> attribute:</p>
+        </div><br>
+
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Simple collapsible</button>
+        <div id="demo2" class="collapse in">
+            <p>By default, the collapsible content is hidden. However, you can add the <code>.in</code> class to show the content by default:</p>
+        </div>
+
+        <h2>Collapsible Panel</h2>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">Panel Body</div>
+                    <div class="panel-footer">Panel Footer</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Collapsible List Group</h2>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">Collapsible list group</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">One</li>
+                        <li class="list-group-item">Two</li>
+                        <li class="list-group-item">Three</li>
+                    </ul>
+                    <div class="panel-footer">Panel Footer</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Accordion Example</h2>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_1">Collapsible Group 1</a>
+                    </h4>
+                </div>
+                <div id="collapse_1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>The following example shows a simple accordion by extending the panel component.</p>
+                        <p><strong>Note:</strong> Use the <code>data-parent</code> attribute to make sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_2">Collapsible Group 2</a>
+                    </h4>
+                </div>
+                <div id="collapse_2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>The following example shows a simple accordion by extending the panel component.</p>
+                        <p><strong>Note:</strong> Use the <code>data-parent</code> attribute to make sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_3">Collapsible Group 3</a>
+                    </h4>
+                </div>
+                <div id="collapse_3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>The following example shows a simple accordion by extending the panel component.</p>
+                        <p><strong>Note:</strong> Use the <code>data-parent</code> attribute to make sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div>
+            <p>The Bootstrap grid system has four classes:</p>
+            <ul>
+                <li>xs (for phones)</li>
+                <li>sm (for tablets)</li>
+                <li>md (for desktops)</li>
+                <li>lg (for larger desktops)</li>
+            </ul>
+            <p>The classes above can be combined to create more dynamic and flexible layouts.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="background-color: lavender;">.col-sm-4</div>
+            <div class="col-sm-4" style="background-color: lavenderblush;">.col-sm-4</div>
+            <div class="col-sm-4" style="background-color: lavender;">.col-sm-4</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="background-color: lavender;">.col-sm-4</div>
+            <div class="col-sm-8" style="background-color: lavenderblush;">.col-sm-8</div>
+        </div>
+        <p>Change the order of the grid columns with <code>.col-md-push-*</code> and <code>.col-md-pull-*</code> classes:</p>
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-8" style="background-color:lavender;">.col-sm-4 .col-sm-push-8</div>
+            <div class="col-sm-8 col-sm-pull-4" style="background-color:lavenderblush;">.col-sm-8 .col-sm-pull-4</div>
+        </div>
+    </div>
+</body>
+</html>

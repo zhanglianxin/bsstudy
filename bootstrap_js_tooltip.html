@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+    /* Tooltip */
+    .test + .tooltip > .tooltip-inner {
+        background-color: #73ad21;
+        color: #fff;
+        border: 1px solid green;
+        padding: 15px;
+        font-size: 20px;
+    }
+    /* Tooltip on top */
+    .test + .tooltip.top > .tooltip-arrow {
+        border-top: 5px solid green;
+    }
+    /* Tooltip on bottom */
+    .test + .tooltip.bottom > .tooltip-arrow {
+        border-bottom: 5px solid blue;
+    }
+    /* Tooltip on left */
+    .test + .tooltip.left > .tooltip-arrow {
+        border-left: 5px solid red;
+    }
+    /* Tooltip on right */
+    .test + .tooltip.right > .tooltip-arrow {
+        border-right: 5px solid black;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JS Tooltip (tooltip.js)</h2>
+        <p>The Tooltip plugin is small pop-up box that appears when the user moves the mouse pointer over an element.</p>
+
+        <h2>Via <big><code>data-*</code></big> Attritutes</h2>
+        <p>The <code>data-toggle="tooltip"</code> activates the tooltip.</p>
+        <p>The <code>title</code> attribute specifies the text that should be displayed inside the tooltip.</p>
+<pre>
+&lt;a href="javascript:;" data-toggle="tooltip" title="Hooray!"&gt;Hover over me&lt;/a&gt;
+</pre>
+
+        <h2>Via JavaScript</h2>
+        <p>Tooltips are not CSS-only plugins, and must therefore be initialized with jQuery: select the specified element and call the <code>tooltip()</code> method.</p>
+<pre>
+// Select all elements with data-toggle="tooltips" in the document
+$('[data-toggle="tooltip"]]').tooltip();
+
+// Select a specified element
+$('#myTooltip').tooltip();
+</pre>
+
+        <h2>Tooltip Options</h2>
+        <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-placement=""</code>.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th width="5%">Name</th><th width="18%">Type</th><th width="12%">Default</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>animation</code></td><td>boolean</td><td>true</td><td>Specifies whether to add a CSS fade transition effect when showing and hiding the tooltip<ul><li>true - Add a fading effect</li><li>false - Do not add a fading effect</li></ul></td></tr>
+                <tr><td><code>container</code></td><td>string, or the boolean false</td><td>false</td><td>Appends the tooltip to a specific element. <br>Example: container: 'body'</td></tr>
+                <tr><td><code>delay</code></td><td>number, or object</td><td>0</td><td>Specifies the number of milliseconds it will take to show and hide the tooltip.<br><br>To specify a delay for showing and another one for hiding, use the object structure:<br><br>delay: {show: 500, hide: 100} - which will take 500 ms to show the tooltip, but only 100 ms to hide it</td></tr>
+                <tr><td><code>html</code></td><td>boolean</td><td>false</td><td>Specifies whether to accept HTML tags in the tooltip:<ul><li>true - Accept HTML tags</li><li>false - Do not accept HTML tags</li></ul><strong>Note:</strong> The HTML must be inserted in the title attribute (or using the title option).<br><br>When set to false (default), jQuery's <u>text()</u> method will be used. Use this if you are worried about XSS attacks</td></tr>
+                <tr><td><code>placement</code></td><td>string</td><td>"top"</td><td>Specifies the tooltip position. Possible values:<ul><li>"top" - Tooltip on top</li><li>"bottom" - Tooltip on bottom</li><li>"left" - Tooltip on left</li><li>"right" - Tooltip on right</li><li>"auto" - Lets the browser decide the position of the tooltip.<br>For example, if the value is "auto left", the tooltip will display on the left side when possible, otherwise on the right.<br>If the value is "auto bottom", the tooltip will display at the bottom when possible, otherwise on the top</li></ul></td></tr>
+                <tr><td><code>selector</code></td><td>string, or the boolean false</td><td>false</td><td>Adds the tooltip to a specified selector</td></tr>
+                <tr><td><code>template</code></td><td>string</td><td></td><td>Base HTML to use when creating the tooltip.<br><br>The tooltip's title will be inserted into the element having the class <code>.tooltip-inner</code> and the element with the class <code>.tooltip-arrow</code> will become the tooltip's arrow.<br><br>The outermost wrapper element should have the <code>.tooltip</code> class.</td></tr>
+                <tr><td><code>title</code></td><td>string</td><td>""</td><td>Specifies the text that should be displayed inside the tooltip</td></tr>
+                <tr><td><code>trigger</code></td><td>string</td><td>"hover focus"</td><td>Specifies how the tooltip is triggered. Possible values:<ul><li>"click" - Trigger the tooltip with a click</li><li>"hover" - Trigger the tooltip on hover</li><li>"focus" - Trigger the tooltip when it gets focus (by tabbing or clicking .e.g)</li><li>"manual" - Trigger the tooltip manually</li></ul><strong>Tip:</strong> To pass multiple values, separate them with a space</td></tr>
+                <tr><td><code>viewport</code></td><td>string, or object</td><td>{selector: "body", padding: 0}</td><td>Keeps the tooltip within the bounds of this element.<br><br>Example: viewport: '#viewport' or {selector: '#viewport', padding: 0}</td></tr>
+            </tbody>
+        </table>
+    
+        <h2>Tooltip Methods</h2>
+        <p>The following table lists all available tooltip methods.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Method</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.tooltip(<em>options</em>)</code></td><td>Activates the tooltip with an option.</td></tr>
+                <tr><td><code>.tooltip("show")</code></td><td>Shows the tooltip</td></tr>
+                <tr><td><code>.tooltip("hide")</code></td><td>Hides the tooltip</td></tr>
+                <tr><td><code>.tooltip("toggle")</code></td><td>Toggles the tooltip</td></tr>
+                <tr><td><code>.tooltip("destroy")</code></td><td>Hides and destroys the tooltip</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Tooltip Events</h2>
+        <p>The following table lists all available tooltip events.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Event</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>show.bs.tooltip</code></td><td>Occurs when the tooltip is about to be shown</td></tr>
+                <tr><td><code>shown.bs.tooltip</code></td><td>Occurs when the tooltip is fully shown (after CSS transitions have completed)</td></tr>
+                <tr><td><code>hide.bs.tooltip</code></td><td>Occurs when the tooltip is about to be hidden</td></tr>
+                <tr><td><code>hidden.bs.tooltip</code></td><td>Occurs when the tooltip is fully hidden (after CSS transitions have completed)</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Custom Tooltip Design</h2>
+        <p>Use CSS to customize the look of the tooltip</p>
+        <ul class="list-inline">
+            <li><a class="test" href="javascript:;" data-toggle="tooltip" title="Hooray!" data-placement="top">Top</a></li>
+            <li><a class="test" href="javascript:;" data-toggle="tooltip" title="Hooray!" data-placement="bottom">Bottom</a></li>
+            <li><a class="test" href="javascript:;" data-toggle="tooltip" title="Hooray!" data-placement="left">Left</a></li>
+            <li><a class="test" href="javascript:;" data-toggle="tooltip" title="Hooray!" data-placement="right">Right</a></li>
+        </ul>
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</html>

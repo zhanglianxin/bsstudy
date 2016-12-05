@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>JS Dropdown (dropdown.js)</h2>
+        <p>A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list.</p>
+
+        <h2>The Dropdown Plugin Classes</h2>
+        <table>
+            <thead>
+                <tr><th width="30%">Class</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.dropdown</code></td><td>Indicates a dropdown menu</td></tr>
+                <tr><td><code>.dropdown-menu</code></td><td>Builds the dropdown menu</td></tr>
+                <tr><td><code>.dropdown-menu-right</code></td><td>Rigth-aligns a dropdown menu</td></tr>
+                <tr><td><code>.dropdown-header</code></td><td>Adds a header inside the dropdown menu</td></tr>
+                <tr><td><code>.dropup</code></td><td>Indicates a dropdown menu</td></tr>
+                <tr><td><code>.disabled</code></td><td>Disables an item in the dropdown menu</td></tr>
+                <tr><td><code>.divider</code></td><td>Separates items inside the dropdown menu with a horizontal line</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Via <code><big>data-*</big></code> Attributes</h2>
+        <p>Add <code>data-toggle="dropdown"</code> to a link or a button to toggle a dropdown menu.</p>
+<pre>
+&lt;a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"&gt;&lt;/a&gt;
+</pre>
+
+        <h2>Via JavaScript</h2>
+        <p>Enable manually with:</p>
+<pre>$('.dropdown-toggle').dropdown();</pre>
+        <p><strong>Note:</strong> The <code>data-toggle="dropdown"</code> attribute is required regardless of whether you call the <code>dropdown()</code> method.</p>
+
+        <h2>Dropdown Options</h2>
+        <td>None</td>
+
+        <h2>Dropdown Methods</h2>
+        <p>The following table lists all available dropdown methods.</p>
+        <table>
+            <thead>
+                <tr><th width="30%">Method</th><th width="70%">Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.dropdown("toggle")</code></td><td>Toggles the dropdown</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Dropdown Events</h2>
+        <p>The following table lists all available dropdown events.</p>
+        <table>
+            <thead>
+                <tr><th>Event</th><th width="85%">Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>show.bs.dropdown</code></td><td>Occurs when the dropdown is about to be shown</td></tr>
+                <tr><td><code>shown.bs.dropdown</code></td><td>Occurs when the dropdown is fully shown (after CSS transitions have completed)</td></tr>
+                <tr><td><code>hide.bs.dropdown</code></td><td>Occurs when the dropdown is about to be hidden</td></tr>
+                <tr><td><code>hidden.bs.dropdown</code></td><td>Occurs when the dropdown is fully hidden (after CSS transitions have completed)</td></tr>
+            </tbody>
+        </table>
+        <p><strong>Tips:</strong> Use jQuery's <u>event.relatedTarget</u> to get the element which triggered the dropdown:</p>
+<pre>
+$(".dropdown").on("show.bs.dropdown", function() {
+    var x = $(event.relatedTarget).text(); // Get the text of the element
+    alert(x);
+});
+</pre>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

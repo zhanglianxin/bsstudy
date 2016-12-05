@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>JS Carousel (carousel.js)</h2>
+        <p>The Carousel plugin is a component for cycling through elements, like a carousel (slideshow).</p>
+
+        <h2>The Carousel Plugin Classes</h2>
+        <table>
+            <thead>
+                <tr><th width="18%">Class</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.carousel</code></td><td>Creates a carousel</td></tr>
+                <tr><td><code>.slide</code></td><td>Adds a CSS transition and animation effect when sliding from one item to the next. Remove this class if you do not want this effect</td></tr>
+                <tr><td><code>.carousel-indicators</code></td><td>Adds indicators for the carousel. These are the little dots at the bottom of each slide (which indicates how many slides there are in the carousel, and which slide the user are currently viewing)</td></tr>
+                <tr><td><code>.carousel-inner</code></td><td>Adds slides to the carousel</td></tr>
+                <tr><td><code>.item</code></td><td>Specifies the content of each slide</td></tr>
+                <tr><td><code>.left carousel-control</code></td><td>Adds a left button to the carousel, which allows the user to go back between the slides</td></tr>
+                    <tr><td><code>.right carousel-control</code></td><td>Adds a right button to the carousel, which allows the user to go forward between the slides</td></tr>
+                <tr><td><code>.carousel-caption</code></td><td>Specifies a caption for the carousel</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Via <code>data-*</code> Attributes</h2>
+        <p>The <code>data-ride="carousel"</code> attribute activates the carousel.</p>
+        <p>The <code>data-slide</code> and <code>data-slide-to</code> attributes specifies which slide to go to.</p>
+        <p>The <code>data-slide</code> attribute accepts two values: <strong>prev</strong> or <strong>next</strong>, while <code>data-slide-to</code> accept numbers.</p>
+<pre>
+&lt;!-- Carousel --&gt;
+&lt;div id="myCarousel" class="carousel slide" data-ride="carousel"&gt;
+    &lt;!-- Carousel Indicators --&gt;
+    &lt;li data-target="#myCarousel" data-slide-to="1"&gt;&lt;/li&gt;
+    &lt;!-- Carousel Controls --&gt;
+    &lt;a class="left carousel-control" href="#myCarousel" data-slide="prev"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+        <h2>Via JavaScript</h2>
+        <p>Enable manually with:</p>
+<pre>
+// Activate Carousel
+$("#myCarousel").carousel();
+// Enable Carousel Indicators
+$().click(function() {
+    $("#myCarousel").carousel(1);
+});
+// Enable Carousel Controls
+$().click(function() {
+    $("#myCarousel").carousel("prev");
+});
+</pre>
+
+        <h2>Carousel Options</h2>
+        <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
+        <table>
+            <thead>
+                <tr><th width="10%">Name</th><th width="20%">Type</th><th width="10%">Default</th><th width="60%">Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>interval</code></td><td>number, or the boolean false</td><td>5000</td><td>Specifies the delay (in milliseconds) between each slide.<br><strong>Note:</strong> Set interval to <strong>false</strong> to stop the items from automatically sliding<br><br></td></tr>
+                <tr><td><code>pause</code></td><td>string, or the boolean false</td><td>"hover"</td><td>Pauses the carousel from going through the next slide when the mouse pointer enters the carousel, and resumes the sliding when the mouse pointer leaves the carousel<br><strong>Note:</strong> Set pause to <code>false</code> to stop the ability to pause on hover<br><br></td></tr>
+                <tr><td><code>wrap</code></td><td>boolean</td><td>true</td><td>Specifies whether the carousel should go through all slides continuously, or stop at the last slide<ul><li>true - cycle continuously</li><li>false - stop at the last item</li></ul></td></tr>
+            </tbody>
+        </table>
+
+        <h2>Carousel Methods</h2>
+        <p>The following table lists all available carousel methods.</p>
+        <table>
+            <thead>
+                <tr><th width="25%">Method</th><th width="75%">Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.carousel(<em>options</em>)</code></td><td>Activates the carousel with an option. See</td></tr>
+                <tr><td><code>.carousel("cycle")</code></td><td>Goes through the carousel items from left to right</td></tr>
+                <tr><td><code>.carousel("pause")</code></td><td>Stops the carousel from going through items</td></tr>
+                <tr><td><code>.carousel(number)</code></td><td>Goes to a specified item (zero-based: first item is 0, second item is 1, etc..)</td></tr>
+                <tr><td><code>.carousel("prev")</code></td><td>Goes to the previous item</td></tr>
+                <tr><td><code>.carousel("next")</code></td><td>Goes to the next item</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Carousel Events</h2>
+        <p>The following table lists all available carousel events.</p>
+        <table>
+            <thead>
+                <tr><th width="25%">Event</th><th width="75%">Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>slide.bs.carousel</code></td><td>Occurs when the carousel is about to slide from one item to another</td></tr>
+                <tr><td><code>slid.bs.carousel</code></td><td>Occurs when the carousel has finished sliding from one item to another</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

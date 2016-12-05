@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+        /* Icon when the collapsible content is shown */
+        .btn-lg:after {
+            font-family: "Glyphicons Halflings";
+            content: "\e114";
+            float: right;
+            margin-left: 15px;
+        }
+        /* Icon when the collapsible content is hidden */
+        .btn-lg.collapsed:after {
+            content: "\e080";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JS Carousel (carousel.js)</h2>
+        <p>The following example shows a simple accordion by extending the panel component:</p>
+        <p><strong>Note:</strong> The <code>data-parent</code> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse1">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" id="collapse2">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" id="collapse3">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Expand and Collapse Toggle Icon & Text</h2>
+        <p>The following example changes the open / close text and icon when opening and closing the collapsible content:</p>
+        <button class="btn btn-success" data-toggle="collapse" data-target="#demo">
+            <span class="glyphicon glyphicon-collapse-down"></span> Open
+        </button>
+        <div class="collapse" id="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+        <h2>Simple Collapsible</h2>
+        <button class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#demo1">Simple collapsible</button>
+        <div class="collapse" id="demo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+        /* for demo */
+        $(document).ready(function() {
+            $("#demo").on("hide.bs.collapse", function() {
+                $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Open');
+            });
+            $("#demo").on("show.bs.collapse", function() {
+                $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Close');
+            });
+        });
+    </script>
+</body>
+</html>

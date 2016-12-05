@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="clearfix">
+            <div class="pull-left">Float an element to the left</div>
+            <div class="pull-right">Float an element to the right</div>
+        </div>
+        <div class="center-block" style="background-color:yellow; width:200px;">Set an element to <code>display: block</code> with margin-right: auto</code> and <code>margin-left: auto</code></div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-3" style="background-color: lavender;">Column 1<br>Resize the browser window to see the effect. Also try to remove the div clearfix line and see what happens.</div>
+            <div class="col-xs-6 col-sm-3" style="background-color: lavenderblush;">Column 2</div>
+            <!-- Add clearfix for only the required viewport -->
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-3" style="background-color: lightcyan;">Column 3</div>
+            <div class="col-xs-6 col-sm-3" style="background-color: lightgray;">Column 4</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-6 col-sm-3" style="background-color: lavender;">Column 1<br>Resize the browser window to see the effect. Also try to remove the div clearfix line and see what happens.</div>
+            <div class="col-xs-6 col-sm-3" style="background-color: lavenderblush;">Column 2</div>
+            <div class="col-xs-6 col-sm-3" style="background-color: lightcyan;">Column 3</div>
+            <div class="col-xs-6 col-sm-3" style="background-color: lightgray;">Column 4</div>
+        </div>
+        <p>The <code>.sr-only</code> class hides an element to all devices except screen readers:</p>
+        <a class="sr-only" href="#">Skip to main content</a>
+        <p>Combine <code>.sr-only</code> with <code>.sr-only-focusable</code> to show the elements again when it is focused (e.g. by a keyboard-only user):</p>
+        <a class="sr-only sr-only-focusable" href="#">Skip to main content</a>
+        <p>The <code>.text-only</code> class replaces an element's text content with a background image:</p>
+        <div class="text-hide">Some text inside a div element.</div>
+        <p>The <code>.close</code> class indicates a close icon.</p>
+        <div style="padding: 50px; width: 400px; background-color: #f1f1f1;">
+            <span>The close icon floats to the right:</span>
+            <button class="close" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        </div>
+        <p>The <code>.caret</code> class indicates dropdown functionality and direction: <span class="caret"></span></p>
+        <p>The <code>.caret</code> class used on a button:</p>
+        <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="javascript:;">A link</a></li>
+                <li><a href="javascript:;">Another link</a></li>
+                <li><a href="javascript:;">Something else here</a></li>
+            </ul>
+        </div>
+        <br>
+        <p>Resize this page to see how the text below changes:</p>
+        <h1 class="visible-xs">This text is shown only on a EXTRA SMALL screen.</h1>
+        <h1 class="visible-sm">This text is shown only on a SMALL screen.</h1>
+        <h1 class="visible-md">This text is shown only on a MEDIUM screen.</h1>
+        <h1 class="visible-lg">This text is shown only on a LARGE screen.</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Bootstrap's Default Settings</h2>
+        <p>Form controls automatically receive some global styling with Bootstrap:</p>
+        <p>All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with class <code>.form-control</code> have a width of 100%.</p>
+        <h2>Bootstrap Form Layouts</h2>
+        <p>Bootstrap provides three types of form layouts:</p>
+        <ul>
+            <li>Vertical form (this is default)</li>
+            <li>Horizontal form</li>
+            <li>Inline form</li>
+        </ul>
+        <p>Standard rules for all three form layouts:</p>
+        <ul>
+            <li>Always use <code>&lt;form role="form"&gt;</code> (helps improve accessibility for people using screen readers)</li>
+            <li>Wrap labels and form controls in <code>&lt;div class="form-group"&gt;</code> (needed for optimum spacing)</li>
+            <li>Add class <code>.form-control</code> to all textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and 
+            <code>&lt;select&gt;</code> elements</li>
+        </ul>
+
+        <h2>Vertical (basic) form</h2>
+        <form role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name=""> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+        <h2>Inline form</h2>
+        <p>Make the viewport larger than 768px wide to see that all of the form elements are inline, left aligned, and the labels are alongside.</p>
+        <form class="form-inline" role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name=""> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <h2>Inline form with .sr-only class</h2>
+        <p><strong>Tip:</strong> If you don't include a label for every input, screen readers will have trouble with your forms. <br>
+        You can hide the labels for all devices, except screen readers, by using the <code>.sr-only</code> class:</p>
+        <form class="form-inline" role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <label class="sr-only" for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name=""> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+        <h2>Horizontal Form</h2>
+        <p>A horizontal form stands apart from the other forms both in the amount of markup, and in the presentation of the form.</p>
+        <p>Additional rules for a horizontal form:</p>
+        <ul>
+            <li>Add class <code>.form-horizontal</code> to the <code>&lt;form&gt;</code> element</li>
+            <li>Add class <code>.control-label</code> to all <code>&lt;label&gt;</code> elements</li>
+        </ul>
+        <p><strong>Tip:</strong> Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout.</p>
+        <form class="form-horizontal" role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+
+
+        <h2>Form control: input</h2>
+        <form role="form">
+            <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="usr" name="usr">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="text" class="form-control" id="pwd" name="pwd">
+            </div>
+        </form>
+
+        <h2>Form control: textarea</h2>
+        <form role="form">
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" rows="5" id="usr" name="usr"></textarea>
+            </div>
+        </form>
+
+        <h2>Form control: checkbox</h2>
+        <form role="form">
+            <div class="checkbox">
+                <label><input type="checkbox" value="1" name="ckb">Option 1</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="2" name="ckb">Option 2</label>
+            </div>
+            <div class="checkbox disabled">
+                <label><input type="checkbox" value="3" name="ckb" disabled>Option 3</label>
+            </div>
+        </form>
+        <form role="form">
+            <label class="checkbox-inline">
+                <input type="checkbox" value="1" name="ckb">Option 1
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" value="2" name="ckb">Option 2
+            </label>
+            <label class="checkbox-inline disabled">
+                <input type="checkbox" value="3" name="ckb" disabled>Option 3
+            </label>
+        </form>
+        
+        <h2>Form control: radio buttons</h2>
+        <form role="form">
+            <div class="radio">
+                <label><input type="radio" value="1" name="optradio">Option 1</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" value="2" name="optradio">Option 2</label>
+            </div>
+            <div class="radio disabled">
+                <label><input type="radio" value="3" name="optradio" disabled>Option 3</label>
+            </div>
+        </form>
+        <form role="form">
+            <label class="radio-inline">
+                <input type="radio" value="1" name="optradio">Option 1
+            </label>
+            <label class="radio-inline">
+                <input type="radio" value="2" name="optradio">Option 2
+            </label>
+            <label class="radio-inline disabled">
+                <input type="radio" value="3" name="optradio" disabled>Option 3
+            </label>
+        </form>
+
+        <h2>Form control: select</h2>
+        <form role="form">
+            <div class="form-group">
+                <label for="sel1">Select list (select one):</label>
+                <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select><br>
+                <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
+                <select multiple class="form-control" id="sel2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </form>
+
+        <h2>Horizontal form with static control</h2>
+        <form class="form-horizontal" role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static">someone@example.com</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <h2>Horizontal form: control states</h2>
+        <ul>
+            <li><strong>INPUT FOCUS</strong> - The outline of the input is removed and a box-shadow is applied on focus</li>
+            <li><strong>DISABLED INPUTS</strong> - Add a <code>disabled</code> attribute to disable an input field</li>
+            <li><strong>DISABLED FIELDSETS</strong> - Add a <code>disabled</code> attribute to a fieldset to disable all controls within</li>
+            <li><strong>READONLY INPUTS</strong> - Add a <code>readonly</code> attribute to an input to prevent user input</li>
+            <li><strong>VALIDATION STATES</strong> - Bootstrap includes validation styles for error, warning, and success messages. <br>
+            To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element</li>
+            <li><strong>ICONS</strong> - You can add feedback icons with the <code>.has-feedback</code> class and an icon</li>
+            <li><strong>HIDDEN LABELS</strong> - Add a <code>.sr-only</code> class on non-visible labels</li>
+        </ul>
+        <form class="form-horizontal" role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Focused</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="focusedInput" type="text" name="" value="Click to focus...">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="col-sm-2 control-label">
+                    Disabled
+                </label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="disabledInput" type="text" name="" placeholder="Disabled input here...">
+                </div>
+            </div>
+            <fieldset disabled>
+                <div class="form-group">
+                    <label for="disabledTextInput" class="col-sm-2 control-label">Disabled input and select list (Fieldset disabled)</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="disabledTextInput" name="" type="text" placeholder="Disabled input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="disabledSelect" class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" id="disabledSelect">
+                            <option>Disabled select</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group has-success has-feedback">
+                <label class="col-sm-2 control-label" for="inputSuccess">Input with success and glyphicon</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="inputSuccess" name="" type="text">
+                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="form-group has-warning has-feedback">
+                <label class="col-sm-2 control-label" for="inputWarning">Input with warning and glyphicon</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="inputWarning" name="" type="text">
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="form-group has-error has-feedback">
+                <label class="col-sm-2 control-label" for="inputError">Input with error and glyphicon</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="inputError" name="" type="text">
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+            </div>
+        </form>
+
+        <h2>Inline form: control states</h2>
+        <form class="form-inline" role="from" action="javascript:void(0);">
+            <div class="form-group">
+                <label for="foucedInput">Focused</label>
+                <input class="form-control" id="foucedInput" name="" type="text">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Disabled</label>
+                <input class="form-control" id="inputPassword" name="" type="text" disabled>
+            </div>
+            <div class="form-group has-success has-feedback">
+                <label for="inputSuccess1">Input with success</label>
+                <input class="form-control" id="inputSuccess1" name="" type="text">
+                <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+            <div class="form-group has-warning has-feedback">
+                <label for="inputWarning1">Input with warning</label>
+                <input class="form-control" id="inputWarning1" name="" type="text">
+                <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+            </div>
+            <div class="form-group has-error has-feedback">
+                <label for="inputError1">Input with error</label>
+                <input class="form-control" id="inputError1" name="" type="text">
+                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+            </div>
+        </form>
+
+        <h2>Input Sizing</h2>
+        <p>Set the heights of input elements using classes like <code>.input-lg</code> and <code>.input-sm</code>.</p>
+        <form role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <label for="inputdefault">Default input</label>
+                <input class="form-control" id="inputdefault" name="" type="text">
+            </div>
+            <div class="form-group">
+                <label for="inputdelg">input-lg</label>
+                <input class="form-control input-lg" id="inputdelg" name="" type="text">
+            </div>
+            <div class="form-group">
+                <label for="inputdesm">input-sm</label>
+                <input class="form-control input-sm" id="inputdesm" name="" type="text">
+            </div>
+            <div class="form-group">
+                <label for="sel1">Default select list</label>
+                <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sel2">input-lg</label>
+                <select class="form-control input-lg" id="sel2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sel3">input-sm</label>
+                <select class="form-control input-sm" id="sel3">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+        </form>
+        <p>Set the widths of elements using grid column classes like <code>.col-lg-*</code>and <code>.col-sm-*</code>.</p>
+        <form class="form-horizontal" role="form" action="javascript:void(0);">
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label" for="lg">form-group-lg</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="lg" name="" type="text">
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-sm-2 control-label" for="sm">form-group-sm</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="sm" name="" type="text">
+                </div>
+            </div>
+        </form>
+
+        <h2>Column Sizing</h2>
+        <p>The following examples shows input elements with different widths using different <code>.col-xs-*</code> classes.</p>
+        <form role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <div class="col-xs-3">
+                    <label for="ex1">col-xs-3</label>
+                    <input class="form-control" id="ex1" name="" type="text">
+                </div>
+                <div class="col-xs-4">
+                    <label for="ex2">col-xs-4</label>
+                    <input class="form-control" id="ex2" name="" type="text">
+                </div>
+                <div class="col-xs-5">
+                    <label for="ex3">col-xs-5</label>
+                    <input class="form-control" id="ex3" name="" type="text">
+                </div>
+            </div>
+        </form>
+
+        <h2>Help text</h2>
+        <p>Use the <code>.help-block</code> class to add a block level help text in forms.</p>
+        <form role="form" action="javascript:void(0);">
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input class="form-control" id="pwd" name="" type="password" placeholder="Enter password">
+                <span class="help-block">This is some help text that breaks onto a new line and may extend more than one line.</span>
+            </div>
+            <button class="btn btn-default" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

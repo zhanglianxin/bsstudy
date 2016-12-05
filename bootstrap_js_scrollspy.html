@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JS Scrollspy (scrollspy.js)</h2>
+        <p>The Scrollspy plugin is used to automatically update links in a navigation list based on scroll position.</p>
+
+        <h2>Via <big><code>data-*</code></big> Attritutes</h2>
+        <p>Add <code>data-spy="scroll"</code> to the element that should be used as the scrollable area (often this is the <code>&lt;body&gt;</code> element.)</p>
+        <p>Then add the <code>data-target</code> attribute with a value of the id or the class name of the navigation bar (<code>.navbar</code>). This is to make sure that the navbar is connected with the scrollable area.</p>
+        <p>Note that scrollable elements must match the ID of the links inside the navbar's list items (<code>&lt;div id="section1"&gt;</code> matches <code>&lt;a href="#section1"&gt;</code>).</p>
+        <p>The optional <code>data-offset</code> attribute specifies the number of pixels to offset from top when calculating the position of scroll. This is useful when you feel that the links inside the navbar changes the active state too soon or too early when jumping to the scrollable elements. Default is 10 pixels.</p>
+        <p><strong>Requires relative positioning:</strong> The element with <code>data-spy="scroll"</code> requires the CSS <strong>position</strong> property, with a value of "relative" to work properly.</p>
+<pre>
+&lt;!-- The scrollable area --&gt;
+&lt;body data-spy="scroll" data-target=".navbar" data-offset="50"&gt;
+    &lt;!-- The navbar - The &lt;a&gt; elements are used to jump to a section in the scrollable area --&gt;
+    &lt;nav class="navbar navbar-inverse navbar-fixed-top"&gt;
+    ...
+        &lt;ul class="nav navbar-nav"&gt;
+            &lt;li&gt;&lt;a href="#section1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+            ...
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;!-- Section 1 --&gt;
+    &lt;div id="section1"&gt;
+        &lt;h1&gt;Section 1&lt;/h1&gt;
+        &lt;p&gt;Try to scroll this page and look at the navigation bar while scrolling!&lt;/p&gt;
+    &lt;/div&gt;
+    ...
+&lt;/body&gt;
+</pre>
+
+        <h2>Via JavaScript</h2>
+        <p>Enable manually with:</p>
+<pre>
+$('body').scrollspy({target: ".navbar"});
+</pre>
+
+        <h2>Scrollspy Options</h2>
+        <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset=""</code>.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th width="5%">Name</th><th width="18%">Type</th><th width="12%">Default</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>offset</code></td><td>number</td><td>10</td><td>Sepcifies the number of pixels to offset from top when calculating the position of scroll</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Scrollspy Methods</h2>
+        <p>The following table lists all available scrollspy methods.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Method</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.scrollspy(refresh)</code></td><td>When adding and removing elements from the scrollspy, this method can be used to refresh the document</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Scrollspy Events</h2>
+        <p>The following table lists all available scrollspy events.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Event</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>activate.bs.scrollspy</code></td><td>Occurs when a new item becomes activated by the scrollspy</td></tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+    </script>
+</html>

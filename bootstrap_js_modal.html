@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JS Modal (modal.js)</h2>
+        <p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page.</p>
+
+        <h2>The Modal Plugin Classes</h2>
+        <table>
+            <thead>
+                <tr><th width="20%">Class</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.modal</code></td><td>Creates a modal</td></tr>
+                <tr><td><code>.modal-content</code></td><td>Styles the modal properly with border, background-color, etc. <br>Use this class to add the modal's header, body, and footer.</td></tr>
+                <tr><td><code>.modal-header</code></td><td>Defines the style for the header of the modal</td></tr>
+                <tr><td><code>.modal-body</code></td><td>Defines the style of the body of the modal</td></tr>
+                <tr><td><code>.modal-footer</code></td><td>Defines the style of the footer in the modal. <br><strong>Note:</strong> This area is right-aligned by default. <br>To change this, overwrite CSS with text-align: left | center</td></tr>
+                <tr><td><code>.modal-sm</code></td><td>Specifies a small modal</td></tr>
+                <tr><td><code>.modal-lg</code></td><td>Specifies a large modal</td></tr>
+                <tr><td><code>.fade</code></td><td>Adds an animation/transition effect which fades the modal in and out</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Trigger the Modal Via <code>data-*</code> Attributes</h2>
+        <p>Add <code>data-toggle="modal"</code> and <code>data-target="#modalID"</code> to any element.</p>
+        <p><strong>Note:</strong> For <code>&lt;a&gt;</code> elements, omit <code>data-target</code>, and use <code>href="#modalID"</code> instead:</p>
+<pre>
+&lt;!-- Buttons --&gt;
+&lt;button type="button" data-toggle="modal" data-target="#myModal"&gt;Open Modal&lt;/button&gt;
+
+&lt;!-- Links --&gt;
+&lt;a href="#myModal" data-toggle="modal"&gt;Open Modal&lt;/a&gt;
+
+&lt;!-- Other elements --&gt;
+&lt;p data-toggle="modal" data-target="#myModal"&gt;Open Modal&lt;/p&gt;
+</pre>
+
+        <h2>Trigger Via JavaScript</h2>
+        <p>Enable manually with:</p>
+<pre>
+$("#myModal").modal();
+</pre>
+
+        <h2>Modal Options</h2>
+        <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+        <table>
+            <thead>
+                <tr><th width="10%">Name</th><th width="20%">Type</th><th width="10%">Default</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>backdrop</code></td><td>boolean or the string "static"</td><td>true</td><td>Specifies whether the modal should have a dark overlay:<ul><li>true - dark overlay</li><li>false - no overlay (transparent)</li></ul>If you specify the value "static", it is not possible to close the modal when clicking outside of it<br><br></td></tr>
+                <tr><td><code>keyboard</code></td><td>boolean</td><td>true</td><td>Specifies whether the modal can be closed with the escape key <kbd>Esc</kbd>:<ul><li>true - the modal can be closed with Esc</li><li>false - the modal cannot be closed with Esc</li></ul></td></tr>
+                <tr><td><code>show</code></td><td>boolean</td><td>true</td><td>Specifies whether to show the modal when initialized</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Modal Methods</h2>
+        <p>The following table lists all available modal methods.</p>
+        <table>
+            <thead>
+                <tr><th width="20%">Method</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.modal(<em>options</em>)</code></td><td>Activates the content as a modal.</td></tr>
+                <tr><td><code>.modal("toggle")</code></td><td>Toggles the modal.</td></tr>
+                <tr><td><code>.modal("show")</code></td><td>Opens the modal.</td></tr>
+                <tr><td><code>.modal("hide")</code></td><td>Hides the modal.</td></tr>
+            </tbody>
+        </table>
+        <h2>Modal Events</h2>
+        <p>The following table lists all available modal events.</p>
+        <table>
+            <thead>
+                <tr><th width="20%">Event</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>show.bs.modal</code></td><td>Occurs when the modal is about to be shown</td></tr>
+                <tr><td><code>shown.bs.modal</code></td><td>Occurs when the modal is fully shown (after CSS transitions have completed)</td></tr>
+                <tr><td><code>hide.bs.modal</code></td><td>Occurs when the modal is about to be hidden</td></tr>
+                <tr><td><code>hidden.bs.modal</code></td><td>Occurs when the modal is fully hidden (after CSS transitions have completed)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

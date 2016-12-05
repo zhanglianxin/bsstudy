@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+    /* Popover */
+    .popover {
+        border: 2px dotted red;
+    }
+    /* Popover Header */
+    .popover-title {
+        background-color: #73ad21;
+        color: #fff;
+        font-size: 28px;
+        text-align: center;
+    }
+    /* Popover Body */
+    .popover-content {
+        background-color: coral;
+        color: #fff;
+        padding: 25px;
+    }
+    /* Popover Arrow */
+    .arrow {
+        border-right-color: red !important;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JS Popover (popover.js)</h2>
+        <p>The Popover plugin is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content.</p>
+
+        <h2>Via <big><code>data-*</code></big> Attritutes</h2>
+        <p>The <code>data-toggle="popover"</code> activates the popover.</p>
+        <p>The <code>title</code> attribute specifies the header text of the popover.</p>
+        <p>The <code>data-content</code> attribute specifies the text that should be displayed inside the popover's body.</p>
+
+        <h2>Via JavaScript</h2>
+        <p>Popovers are not CSS-only plugins, and must therefore be initialized with jQuery: select the specified element and call the <code>popover()</code> method.</p>
+<pre>
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+});
+</pre>
+        <a href="javascript:;" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+
+        <h2>Popover Options</h2>
+        <p>Options can be passed via data attributes or JavaScript. For data-attributes, append the option name to <code>data-</code>, as in <code>data-placement=""</code>.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th width="5%">Name</th><th width="18%">Type</th><th width="12%">Default</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>animation</code></td><td>boolean</td><td>true</td><td>Specifies whether to add a CSS fade transition effect when opening and closing the popover<ul><li>true - 
+                Add a fading effect</li><li>false - Do not add a fading effect</li></ul></td></tr>
+                <tr><td><code>container</code></td><td>string, or the boolean false</td><td>false</td><td>Appends the popover to a specific element. Example: container: 'body'</td></tr>
+                <tr><td><code>content</code></td><td>string</td><td>""</td><td>Specifies the text inside the popover's body</td></tr>
+                <tr><td><code>delay</code></td><td>number, or object</td><td>0</td><td>Specifies the number of milliseconds it will take to open and close the popover. <br><br>To specify a delay for opening and another one for closing, use the object structure: <br><br>delay: {show: 500, hide: 100} - which will take 500 ms to open the popover, but only 100 ms to close it</td></tr>
+                <tr><td><code>html</code></td><td>boolean</td><td>false</td><td>Specifies whether to accept HTML　tags in the popover:<ul><li>true - Accept HTML tags</li><li>false - Do not accept HTML tags</li></ul><strong>Note:</strong> The HTML must be inserted in the title attribute (or using the title option).<br><br>When set to false (default), jQuery's <u>text()</u> method will be used. <br>Use this if you are worried about XSS attacks</td><td></td></tr>
+                <tr><td><code>placement</code></td><td>string</td><td>"right"</td><td>Specifies the popover position. Possible values:<ul><li>"top" - Popover on top</li><li>"bottom" - Popover on bottom</li><li>"left" - Popover on left</li><li>"right" - Popover on right</li><li>"auto" - Lets the browser decide the position of the popover. <br>For example, if the value is "auto left", the popover will display on the left side when possible, otherwise on the right. <br>If the value is "auto bottom", the popover will display at the bottom when possible, otherwise on the top</li></ul></td></tr>
+                <tr><td><code>selector</code></td><td>string, or the boolean false</td><td>false</td><td>Adds the popover to a specified selector</td></tr>
+                <tr><td><code>template</code></td><td>string</td><td></td><td>Base HTML to use when creating the popover.<br><br>The popover's title will be injected into the .popover-title.<br><br>The popover's content will be injected into the .popover-content.<br><br>.arrow will become the popover's arrow.<br><br>The outermost wrapper element should have the .popover class.</td></tr>
+                <tr><td><code>title</code></td><td>string</td><td>""</td><td>Specifies the header text of the popover</td></tr>
+                <tr><td><code>trigger</code></td><td>string</td><td>"click"</td><td>Specifies how the popover is triggered. Possible values:<ul><li>"click" - Trigger the popover with a click</li><li>"hover" - Trigger the popover on hover</li><li>"focus" - Trigger the popover when it gets focus (by tabbing or clicking .e.g)</li><li>"manual" - Trigger the popover manually</li></ul><strong>Tip:</strong> To pass multiple values, separate them with a space</td></tr>
+                <tr><td><code>viewport</code></td><td>string, or object</td><td>{selector: "body", padding: 0}</td><td>Keeps the popover within the bounds of this element.<br><br>Example: viewport: '#viewport' or {selector: '#viewport', padding: 0}</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Popover Methods</h2>
+        <p>The following table lists all available popover methods.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Method</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.popover(<em>options</em>)</code></td><td>Activates the popover with an option.</td></tr>
+                <tr><td><code>.popover("show")</code></td><td>Shows the popover</td></tr>
+                <tr><td><code>.popover("hide")</code></td><td>Hides the popover</td></tr>
+                <tr><td><code>.popover("toggle")</code></td><td>Toggles the popover</td></tr>
+                <tr><td><code>.popover("destroy")</code></td><td>Hides and destroys the popover</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Popover Events</h2>
+        <p>The following table lists all available popover events.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Event</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>show.bs.popover</code></td><td>Occurs when the popover is about to be shown</td></tr>
+                <tr><td><code>shown.bs.popover</code></td><td>Occurs when the popover is fully shown (after CSS transitions have completed)</td></tr>
+                <tr><td><code>hide.bs.popover</code></td><td>Occurs when the popover is about to be hidden</td></tr>
+                <tr><td><code>hidden.bs.popover</code></td><td>Occurs when the popover is fully hidden (after CSS transitions have completed)</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Custom Popover Design</h2>
+        <p>Use CSS to customize the look of the popover</p>
+        <a href="javascript:;" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</html>

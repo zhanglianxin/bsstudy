@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>JS Carousel (carousel.js)</h2>
+        <p>The Carousel plugin is a component for cycling through elements, like a carousel (slideshow).</p>
+
+        <h2>The Carousel Plugin Classes</h2>
+        <table>
+            <thead>
+                <tr><th width="18%">Class</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.collapse</code></td><td>Hides the content</td></tr>
+                <tr><td><code>.collapse in</code></td><td>Shows the content</td></tr>
+                <tr><td><code>.collapsing</code></td><td>Added when the transition starts, and removed when it finishes</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Via <code><big>data-*</big></code> Attributes</h2>
+        <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a CSS selector to apply the collapse to. Be sure to add the class collapse to the collapsible element. If you'd like it to default open, add the additional class in.</p>
+<pre>
+    &lt;button class="btn" data-toggle="collapse" data-target="#demo"&gt;Collapsible&lt;/button&gt;
+    &lt;div id="demo" class="collapse"&gt;Some text...&lt;/div&gt;
+</pre>
+        <p><strong>Tip:</strong> To add accordion-like group management to a collapsible control, add the data attribute data-parent="#selector".</p>
+
+        <h2>Via JavaScript</h2>
+        <p>Enable manually with:</p>
+<pre>$('.collapse').collapse();</pre>
+
+        <h2>Collapse Options</h2>
+        <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to data-, as in data-parent="</p>
+        <table>
+            <thead>
+                <tr><th width="6%">Name</th><th width="8%">Type</th><th width="6%">Default</th><th width="80%">Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>parent</code></td><td>selector</td><td>false</td><td>All collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the panel class)</td></tr>
+                <tr><td><code>toggle</code></td><td>boolean</td><td>true</td><td>Toggles the collapsible element on invocation</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Collapse Methods</h2>
+        <p>The following table lists all available collapse methods.</p>
+        <table>
+            <thead>
+                <tr><th>Method</th><th width="80%">Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>.collapse(<em>options</em>)</code></td><td>Activates the collapsible element with an option. </td></tr>
+                <tr><td><code>.collapse("toggle")</code></td><td>Toggles the collapsible element</td></tr>
+                <tr><td><code>.collapse("show")</code></td><td>Shows the collapsible element</td></tr>
+                <tr><td><code>.collapse("hide")</code></td><td>Hides the collapsible element</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Collapse Events</h2>
+        <p>The following table lists all available collapse events.</p>
+        <table>
+            <thead>
+                <tr><th>Event</th><th width="85%">Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>show.bs.collapse</code></td><td>Occurs when the collapsible element is about to be shown</td></tr>
+                <tr><td><code>shown.bs.collapse</code></td><td>Occurs when the collapsible element is fully shown (after CSS transitions have completed)</td></tr>
+                <tr><td><code>hide.bs.collapse</code></td><td>Occurs when the collapsible element is about to be hidden</td></tr>
+                <tr><td><code>hidden.bs.collapse</code></td><td>Occurs when the collapsible element is fully hidden (after CSS transitions have completed)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

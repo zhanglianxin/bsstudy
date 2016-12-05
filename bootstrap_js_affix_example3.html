@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+        .affix {
+            top: 0;
+            width: 100%;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+        }
+        .affix-top {
+            position: static;
+            top: -35px;
+        }
+        .affix + .container-fluid {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid" style="background-color: #f44336; color: #fff; height: auto;">
+        <h1>Animated navbar on affix<br><small>Slide in the navbar</small></h1>
+        <h3>Fixed (sticky) navbar on scroll, using jQuery</h3>
+        <p>Scroll this page to see how the navbar behaves.</p>
+        <p>The navbar is attached to the top of the page after you have scrolled passed the header element.</p>
+    </header>
+
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="javascript:;">Basic Topnav</a></li>
+            <li><a href="javascript:;">Page 1</a></li>
+            <li><a href="javascript:;">Page 2</a></li>
+            <li><a href="javascript:;">Page 3</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" style="height: 1000px;">
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+        <h1>Some text to enable scrolling</h1>
+    </div>
+
+    <script src="//ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /* affix the navbar after scroll below header */
+            $(".navbar").affix({
+                offset: {top: $("header").outerHeight(true)}
+            });
+        });
+    </script>
+</body>
+</html>
