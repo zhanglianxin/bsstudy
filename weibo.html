@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Weibo Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <style>
+        div.container {
+            width: 650px;
+        }
+        .form-horizontal .radio-inline {
+            padding-top: 0;
+            padding-left: 0;
+        }
+        div.pull-right>button {
+            margin-left: 40px;
+        }
+        form img.img-thumbnail {
+            width: 36px;
+        }
+        div>img.img-rounded {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdn.bootcss.com/angular.js/1.4.8/angular.min.js"></script>
+    <script>
+        var app = angular.module('weibo', []);
+    </script>
+
+    <!-- https://github.com/identicons/debbbbie.png -->
+    <div ng-app="weibo" class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>你好，说点什么吧</h2>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" action="javascript:;">
+                    <div class="form-group">
+                        <div class="col-xs-5">
+                            <input class="form-control" type="text" id="" name="username" placeholder="君の名前">
+                        </div>
+                        <div class="col-xs-7">
+                            <label class="radio-inline">
+                                <input class="sr-only" type="radio" name="imgradio">
+                                <img class="img-thumbnail" src="https://github.com/identicons/default.png">
+                            </label>
+                            <label class="radio-inline">
+                                <input class="sr-only" type="radio" name="imgradio">
+                                <img class="img-thumbnail" src="https://github.com/identicons/default.png">
+                            </label>
+                            <label class="radio-inline">
+                                <input class="sr-only" type="radio" name="imgradio">
+                                <img class="img-thumbnail" src="https://github.com/identicons/default.png">
+                            </label>
+                            <label class="radio-inline">
+                                <input class="sr-only" type="radio" name="imgradio">
+                                <img class="img-thumbnail" src="https://github.com/identicons/default.png">
+                            </label>
+                            <label class="radio-inline">
+                                <input class="sr-only" type="radio" name="imgradio">
+                                <img class="img-thumbnail" src="https://github.com/identicons/default.png">
+                            </label>
+                            <label class="radio-inline">
+                                <input class="sr-only" type="radio" name="imgradio">
+                                <img class="img-thumbnail" src="https://github.com/identicons/default.png">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <textarea class="form-control" rows="5" id="" name="content" placeholder="What do you want to say? Everything is OK."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <div class="pull-right">
+                                <span class="lead">还能输入 <big class="text-info">140</big> 个字</span>
+                                <button class="btn btn-success" type="submit">发 送</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <hr>
+                <ul class="nav nav-tabs bg-info">
+                    <li class="active"><a data-toggle="tab" href="#history">是谁在唱歌</a></li>
+                    <li class="disabled"><a data-toggle="" href="#what">温暖了寂寞</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="history" class="tab-pane fade in active">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <img class="img-rounded" src="https://github.com/identicons/default.png">
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <h4 class="list-group-item-heading"><a href="javascript:;">听你流浪</a>：ようこそ～</h4>
+                                        <br>
+                                        <p class="list-group-item-text"><script>document.write(new Date().toLocaleString());</script><button class="btn btn-xs btn-danger pull-right">删除</button></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <img class="img-rounded" src="https://github.com/identicons/default.png">
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <h4 class="list-group-item-heading"><a href="javascript:;">听你流浪</a>：ようこそ～</h4>
+                                        <br>
+                                        <p class="list-group-item-text"><script>document.write(new Date().toLocaleString());</script><button class="btn btn-xs btn-danger pull-right">删除</button></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <img class="img-rounded" src="https://github.com/identicons/default.png">
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <h4 class="list-group-item-heading"><a href="javascript:;">听你流浪</a>：ようこそ～</h4>
+                                        <br>
+                                        <p class="list-group-item-text"><script>document.write(new Date().toLocaleString());</script><button class="btn btn-xs btn-danger pull-right">删除</button></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <img class="img-rounded" src="https://github.com/identicons/default.png">
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <h4 class="list-group-item-heading"><a href="javascript:;">听你流浪</a>：ようこそ～</h4>
+                                        <br>
+                                        <p class="list-group-item-text"><script>document.write(new Date().toLocaleString());</script><button class="btn btn-xs btn-danger pull-right">删除</button></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="what" class="tab-pane fade in">
+                        <h3>WHAT</h3>
+                        <p>What did you say?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
