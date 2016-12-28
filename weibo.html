@@ -50,6 +50,10 @@
         app.controller('formCtrl', function($scope) {
             $scope.remain = 140;
             $scope.count = function() {
+                if (!$scope.content) {
+                    $scope.remain = 140;
+                    return;
+                }
                 $scope.remain = 140 - $scope.content.length;
             };
         });
